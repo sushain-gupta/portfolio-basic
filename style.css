@@ -42,11 +42,6 @@ body {
     cursor: pointer;
 }
 
-.logo:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out 0.1s;
-}
-
 @keyframes text {
     form{background-position: 0% 50%;}
     to{background-position: 100% 100%;}
@@ -77,10 +72,7 @@ body {
 
 .navbar-link:hover,
 .navbar-link:active {
-    color: aliceblue;
-    animation: text 8s linear infinite; 
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out 0.1s;  
+ 
 }
 
 .navbar-link:after {
@@ -109,7 +101,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     padding: 40px;
 }
 
@@ -122,10 +114,7 @@ body {
 .section-hero p,
 .section-services p {
     font-size: large;
-    /* margin: 40px; */
 }
-
-
 
 
 .mobile-nav-icon {
@@ -150,16 +139,10 @@ body {
         Responsive
     ---------------- */
 
-@media(max-width:40em) {
+@media(max-width:48em){
     .mobile-navbar-btn {
         display: block;
         z-index: 999;
-        /* border: 1px solid goldenrod; */
-        /* border-radius: 20%; */
-    }
-
-    .header .logo {
-        width: auto;
     }
 
     .navbar {
@@ -197,11 +180,39 @@ body {
     .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
         display: none;
     }
-    .active .logo {
-        animation: none;
+}
+
+@media(hover:hover) {
+    .logo:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out 0.1s;
+    } 
+
+    .navbar-link:hover{
+        color: aliceblue;
+        animation: text 8s linear infinite; 
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out 0.1s; 
     }
-    .active .logo:hover {
-        animation: none;
+}
+
+@media(hover:none) {
+    .logo:active {
+        background: url("./assets/ig.jpg");
+        font-family: 'Yellowtail', cursive;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-clip: text;
+        padding-left: 1rem;
+        animation: text 30s linear infinite;
+        font-size: 40px;
+    }
+
+    .navbar-link:active {
+        color: aliceblue;
+        animation: text 8s linear infinite; 
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out 0.1s; 
     }
 }
 
@@ -229,4 +240,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(51, 46, 46, 0.755); 
 }
-  
