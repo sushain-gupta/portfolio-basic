@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+
+* {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sons-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    position: relative;
+    padding: 0 0.8rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(51, 46, 46);
+}
+
+.logo {
+    background: url("./assets/ig.jpg");
+    font-family: 'Yellowtail', cursive;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    padding-left: 1rem;
+    animation: text 30s linear infinite;
+    transition: ease-in-out 0.8s;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+@keyframes text {
+    form{background-position: 0% 50%;}
+    to{background-position: 100% 100%;}
+}
+
+.navbar {
+    padding-right: 40px;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 4.8rem;
+    list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:rgba(240, 248, 255, 0.397);
+    font-family: 'M PLUS Rounded 1c', sons-serif;
+    font-size: 18px;
+    font-weight: 500;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: aliceblue;
+    animation: text 8s linear infinite; 
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out 0.1s;  
+}
+
+.navbar-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(240, 248, 255, 0.245);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.navbar-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.section-hero,
+.section-services {
+    background-color: white;
+    height: 50vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.section-services {
+    background-color: purple;
+    color: white;
+}
+
+
+.section-hero p,
+.section-services p {
+    font-size: large;
+    /* margin: 40px; */
+}
+
+
+
+
+.mobile-nav-icon {
+    width: 4rem;
+    height: 4rem;
+    color: goldenrod;
+
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+    display: none;
+}
+
+
+/*  ----------------
+        Responsive
+    ---------------- */
+
+@media(max-width:40em) {
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 999;
+        /* border: 1px solid goldenrod; */
+        /* border-radius: 20%; */
+    }
+
+    .header .logo {
+        width: auto;
+    }
+
+    .navbar {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translate(100%);
+        transition: all 0.5s;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active .navbar {
+        background-color: rgb(51, 46, 46);
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+        display: block;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+        display: none;
+    }
+    .active .logo {
+        animation: none;
+    }
+    .active .logo:hover {
+        animation: none;
+    }
+}
+
+
+/*  ----------------
+    Scrollbar style
+    ---------------- */
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(51, 46, 46, 0.842); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(51, 46, 46, 0.755); 
+}
+  
