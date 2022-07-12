@@ -37,7 +37,7 @@ body {
     background-clip: text;
     padding-left: 1rem;
     animation: text 30s linear infinite;
-    transition: ease-in-out 0.8s;
+    transition: all 0.6s ease-in-out 0.1s;
     font-size: 40px;
     cursor: pointer;
 }
@@ -195,27 +195,6 @@ body {
         transition: all 0.3s ease-in-out 0.1s; 
     }
 }
-
-@media(hover:none) {
-    .logo:active {
-        background: url("./assets/ig.jpg");
-        font-family: 'Yellowtail', cursive;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-clip: text;
-        padding-left: 1rem;
-        animation: text 30s linear infinite;
-        font-size: 40px;
-    }
-
-    .navbar-link:active {
-        color: aliceblue;
-        animation: text 8s linear infinite; 
-        transform: scale(1.1);
-        transition: all 0.3s ease-in-out 0.1s; 
-    }
-}
-
 
 /*  ----------------
     Scrollbar style
