@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(51, 46, 46);
+  background-color: rgba(43,42,42,255);
 }
 
 .logo {
@@ -134,6 +134,7 @@ body {
 }
 
 .profile-txt {
+  color: whitesmoke;
   font-size: 6vmin;
   padding-bottom: 20px;
 }
@@ -255,14 +256,13 @@ body {
     HERO & SERVICE STYLING
   --------------------------- */
 
-section {
-  background-color: white;
+.section {
+  background-color: rgba(20,21,22,255);
   min-height: 100vh;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 5rem; */
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -278,6 +278,7 @@ section {
 }
 
 section p {
+  color: rgb(245, 245, 245);
   font-size: large;
 }
 
