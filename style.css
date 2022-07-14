@@ -371,39 +371,6 @@ section:last-of-type {
   }
 }
 
-/*---------------------------
-        SCROLL ANIMATION
-  --------------------------- */
-
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 1s all ease;
-}
-
-.reveal .active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.active .fade-bottom {
-  animation: fade-bottom 0.5s ease-in;
-}
-
-@keyframes fade-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
 
 /*  ----------------
     SCROLLBAR STYLING
