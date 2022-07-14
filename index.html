@@ -1,55 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="header">
-                <a class="logo" >SushainGupta</a>
-                <nav class="navbar">
-                    <ul class="navbar-list">
-                        <li><a class="navbar-link" href="#" id="Home">Home</a></li>
-                        <li><a class="navbar-link" href="#" id="Projects">Projects</a></li>
-                        <li><a class="navbar-link" href="#" id="Education">Education</a></li>
-                        <li><a class="navbar-link" href="https://www.linkedin.com/in/sushain-gupta-987015217/" id="Contact" target="_blank">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="mobile-navbar-btn">
-                    <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-                    <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-                </div>
-        </header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+  
+  <!-----------------------
+            HEADER
+    -------------------- -->
+
+  <header class="header">
+    <strong><a class="logo">SushainGupta</a></strong>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li><a class="navbar-link active" name="nav-link" href="#home">Home</a></li>
+        <li><a class="navbar-link" href="#skills">Skills</a></li>
+        <li><a class="navbar-link" href="#projects">Projects</a></li>
+        <li><a class="navbar-link" href="#education">Education</a></li>
+        <li><a class="navbar-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-navbar-btn">
+      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    </div>
+  </header>
 
 
-        <main class="main">
-            
-            <section class="section-hero">
-                <div class="hero">
-                    <p>Hero section</p>
-                </div>
-                <div>
-                    <img src="/assets/hero.jpg" height="250px">
-                </div>
-            </section>
+  <!-----------------------
+              Main
+    -------------------- -->
 
 
-            <section class="section-services">
-                <div class="ss-div1">
-                    <p>Service section</p>
-                </div>
-                <div class="ss-div2">
-                    <img src="/assets/service.svg" height="200px">
-                </div>
-            </section>
-        </main>
+  <section class="main-section" id="home">    
+    <div class="left-home-div">
+      <div>
+        <p class="profile-txt">Hey <img src="./assets/hi.gif" class="hello-img">,</br> 
+          I'm
+          <span class="intro">Sushain Gupta </span></br>
+          <span>And I Am into Web Development! </span>
+        </p>
+      </div>
+      <div class="wrapper">
+        <div class="button">
+          <div class="icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <span>Instagram</span>
+        </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+        <div class="button">
+          <div class="icon">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <span>Twitter</span>
+        </div>
+    
+        <div class="button" id="linkdin">
+          <div class="icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <span>LinkdIn</span>
+        </div>
 
-        <script src="/script.js"></script>
-    </body>
+        <div class="button">
+          <div class="icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <span>Github</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-home-div">
+      <img src="./assets/profile.jpg" class="profile-img">
+    </div>
+    </section>
+
+
+    <section class="main-section" id="skills">
+      <div class="skills-div">
+        <p class="main-p">skill section</p>
+      </div>
+      <div>
+        <img src="/assets/hero.svg" class="hero-img"/>
+      </div>
+    </section>
+
+    <section class="main-section" id="projects">
+      <div class="">
+        <p>projects section</p>
+      </div>
+      <div>
+        <img src="/assets/service.svg" class="service-img"/>
+      </div>
+    </section>
+
+    <section class="main-section" id="education">
+      <div class="">
+        <p>Education section</p>
+      </div>
+      <div>
+        <img src="/assets/hero.svg" class="hero-img"/>
+      </div>
+    </section>
+
+    <section class="main-section" id="contact">
+      <div>
+        <p>Contact section</p>
+      </div>
+      <div>
+        <img src="/assets/service.svg" class="service-img"/>
+      </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
 </html>
