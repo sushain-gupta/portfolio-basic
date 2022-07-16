@@ -33,7 +33,7 @@ body {
   top: 0;
   z-index: 1;
   padding: 0 0.8rem;
-  height: 5rem;
+  height: 5vmax;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,7 @@ body {
   padding-left: 1rem;
   animation: text 30s linear infinite;
   transition: all 0.6s ease-in-out 0.1s;
-  font-size: 50px;
+  font-size: 3vmax;
   cursor: pointer;
 }
 
@@ -69,61 +69,91 @@ body {
 
 .navbar-list {
   display: flex;
-  gap: 4.8rem;
-  padding: 10px;
+  gap: 4vw;
+  padding: 1vw;
   list-style: none;
 }
 
-.navbar-link:link,
-.navbar-link:visited {
+.navbar-link {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   color: rgba(240, 248, 255, 0.397);
   font-family: "M PLUS Rounded 1c", sons-serif;
-  font-size: 18px;
+  font-size: 1.2vw;
   font-weight: 500;
-  transform: scale(1);
   transition: all 0.3s ease-in-out 0.1s;
 }
 
+.navbar-list .active {
+  padding-left: 0.8vw;
+  padding-right: 0.8vw;
+  color:rgba(255, 217, 0, 0.648);
+  transform: scale(1.12);
+  border-radius: 1vw;
+  background-color: rgba(245, 245, 245, 0.089);
+}
 
 
-/*---------------------------
-        MAIN PAGE STYLING
-  --------------------------- */
+/*  -------------------------------
+        OTHER SECTIONS STYLING
+    ------------------------------- */
+
+section {
+  background-color: rgba(20,21,22,255);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+
+section p {
+  color: rgb(245, 245, 245);
+  font-size: large;
+}
+
+section:last-of-type {
+  height: 100vh;
+}
+
+.hero-img,
+.service-img {
+  min-width: 20px;
+  max-width: 100%;
+  width: 400px;
+}
+
+
+/*  -------------------------------
+          HOME PAGE STYLING
+    ------------------------------- */
+
 
 #home {
-  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-top: 10vmax;
+  padding-left: 10vw;
+  padding-right: 10vw;
   padding-bottom: 50px;
-  gap: 10px;
 }
 
 .right-home-div {
-  padding-right: 10vmin;
-  align-content: left;
+  text-align: center;
+  padding: 20px;
 }
 
 .left-home-div {
-  padding-left: 3rem;
-  max-width: 100%;
+  min-width: 50%;
+  padding-top: 10vmin;
+  padding-bottom: 10vmin;
 }
 
-@media screen and (max-width:900px) {
-  #home {
-    flex-direction: column;
-  }
-  
-}
-
-.icon-div {
-  padding-top: 7rem;
-}
 
 .profile-img {
   border-radius: 50%;
@@ -135,51 +165,50 @@ body {
 
 .profile-txt {
   color: whitesmoke;
-  font-size: 6vmin;
+  font-size: 3vmax;
+  text-align: left;
   padding-bottom: 20px;
 }
 
 .hello-img {
-  width: 6vmin;
+  width: 3vmax;
 }
 
-.intro {
+.my-name {
   background-image: url(./assets/ig.jpg);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-family: 'Bangers', cursive;
-  font-size: 6vmin;
-  /* padding-right: 90px; */
+  font-size: 4vmax;
 }
 
 
-/*  ----------------
-    SOCIAL ICONS STYLING
-    ---------------- */
+/*  -------------------------------
+          SOCIAL ICONS STYLING
+    ------------------------------- */
 
 .button {
   float: left;
-  width: 60px;
-  height: 60px;
+  width: 3vmax;
+  height: 3vmax;
   cursor: pointer;
   background: #fff;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: 50vh;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .button span {
-  font-size: 20px;
+  font-size: 1vmax;
   font-weight: 500;
-  line-height: 60px;
-  margin-left: 10px;
-  padding-left: 10px ;
+  margin-left: 0.7vmax;
+  padding-left: 0.7vmax ;
 }
 
 .button:hover {
-  width: 200px;
+  width: 10vmax;
 }
 
 .button:nth-child(1):hover .icon {
@@ -231,8 +260,8 @@ body {
 }
 
 .button .icon {
-  width: 60px;
-  height: 60px;
+  width: 3vmax;
+  height: 3vmax;
   text-align: center;
   border-radius: 50px;
   display: inline-block;
@@ -240,8 +269,8 @@ body {
 }
 
 .button .icon i {
-  font-size: 25px;
-  line-height: 60px;
+  font-size: 1.2vmax;
+  line-height: 3vmax;
   transition: all 0.3s ease-in-out;
 }
 
@@ -252,51 +281,16 @@ body {
 
 
 
-/*---------------------------
-    HERO & SERVICE STYLING
-  --------------------------- */
 
-section {
-  background-color: rgba(20,21,22,255);
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
+/*  -------------------------------
+        HAMBURGER STYLING
+    ------------------------------- */
 
-
-.navbar-list .active {
-  padding-left: 10px;
-  padding-right: 10px;
-  color:rgba(255, 217, 0, 0.648);
-  transform: scale(1.12);
-  border-radius: 20px;
-  background-color: rgba(245, 245, 245, 0.089);
-}
-
-section p {
-  color: rgb(245, 245, 245);
-  font-size: large;
-}
-
-section:last-of-type {
-  height: 100vh;
-}
-
-.hero-img,
-.service-img {
-  min-width: 20px;
-  max-width: 100%;
-  width: 400px;
-}
 
 .mobile-nav-icon {
-  width: 4rem;
-  height: 4rem;
-  color: burlywood;
+  width: 4vmax;
+  height: 4vmax;
+  color: rgb(231, 183, 119);
 }
 
 .mobile-navbar-btn {
@@ -309,11 +303,14 @@ section:last-of-type {
   display: none;
 }
 
-/*-------------------------------
-        RESPONSIVE NAVBAR
-    ---------------- ----------*/
 
-@media (max-width: 48em) {
+
+
+/*  -------------------------------
+        RESPONSIVE NAVABAR
+    ------------------------------- */
+
+@media (max-width: 900px) {
   .mobile-navbar-btn {
     display: block;
     z-index: 999;
@@ -326,6 +323,7 @@ section:last-of-type {
     position: absolute;
     top: 0;
     left: 0;
+    padding-right: 0;
 
     display: flex;
     justify-content: center;
@@ -340,12 +338,16 @@ section:last-of-type {
     align-items: center;
   }
 
+
   .active .navbar {
     background-color: rgb(51, 46, 46);
     transform: translateX(0);
-    opacity: 1;
     visibility: visible;
     pointer-events: auto;
+  }
+
+  .navbar-link {
+    font-size: 2vmax;
   }
 
   .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
@@ -355,8 +357,11 @@ section:last-of-type {
   .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
     display: none;
   }
-
 }
+
+/*  -------------------------------------
+        ON-HOVER NAVBAR LINKS STYLING
+    ------------------------------------- */
 
 @media (hover: hover) {
   .logo:hover {
@@ -373,9 +378,69 @@ section:last-of-type {
 }
 
 
-/*  ----------------
-    SCROLLBAR STYLING
-    ---------------- */
+/*  -------------------------------
+        SCREEN RESPONSIVE
+    ------------------------------- */
+
+@media screen and (max-width:500px) {
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5vw;
+  }
+
+
+  .profile-img{
+    max-width: 100%;
+  }
+
+  .profile-txt {
+    font-size: 8vmin;
+  }
+
+  .my-name {
+  font-size: 8vmin;
+  }
+
+  .hello-img {
+    width: 8vmin;
+  }
+
+  .button {
+    width: 11vmin;
+    height: 11vmin;
+  }
+
+  .button span {
+    font-size: 2.5vmin;
+    font-weight: 500;
+    margin-left: 2vmin;
+    padding-left: 0.5vmin ;
+  }
+  
+  .button:hover {
+    width: 25vmin;
+  }
+
+  .button .icon {
+    width: 11vmin;
+    height: 11vmin;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button .icon i {
+    font-size: 5vmin;
+    line-height: 11vmin;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+/*  -------------------------------
+        SCROLLBAR STYLING
+    ------------------------------- */
 
 ::-webkit-scrollbar {
   width: 5px;
