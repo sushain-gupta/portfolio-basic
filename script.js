@@ -1,6 +1,6 @@
-/*--------------------------------
- Function for resposive nav-bar
- --------------------------------*/
+/*------------------------------------
+     Function for resposive nav-bar
+ -------------------------------------*/
 
 const mobile_nav = document.querySelector('.mobile-navbar-btn');
 
@@ -25,8 +25,8 @@ mobile_nav.addEventListener('click', () => {
 
 
 /*--------------------------------------------------------------------
-Function for Hilighting navlinks on scroll to particular section
--------------------------------------------------------------------*/
+    Function for Hilighting navlinks on scroll to particular section
+----------------------------------------------------------------------*/
 
 
   // Get all sections that have an ID defined
@@ -53,12 +53,30 @@ function navHighlighter() {
       scrollY > sectionTop &&
       scrollY <= sectionTop + sectionHeight
     ){
-      document.querySelector(".navbar a[href*=" + sectionId + "]").classList.add("active");
+      document.querySelector(".navbar a[name*=" + sectionId + "]").classList.add("active");
     } else {
-      document.querySelector(".navbar a[href*=" + sectionId + "]").classList.remove("active");
+      document.querySelector(".navbar a[name*=" + sectionId + "]").classList.remove("active");
     }
   });
 }
 
 
+/*------------------------------------
+        ON SCROLL FUNCTION
+ -------------------------------------*/
 
+const nav_elements = document.getElementsByClassName('navbar-link')
+const links_array = [...nav_elements]
+
+const linkeach = links_array.forEach(link => {
+  const link_name = link.getAttribute("name");
+  const element = document.getElementsByName(link_name)
+
+
+  function scrolldiv() {
+    var section = document.getElementById(link_name);
+    section.scrollIntoView();
+  }
+
+  element[0].addEventListener('click', scrolldiv)
+});
