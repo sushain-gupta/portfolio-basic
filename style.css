@@ -94,7 +94,7 @@ body {
   padding-right: 0.8vw;
   color:rgba(255, 217, 0, 0.648);
   transform: scale(1.12);
-  border-radius: 1vw;
+  border-radius: 50px;
   cursor: default;
   background-color: rgba(245, 245, 245, 0.089);
 }
@@ -115,13 +115,10 @@ section {
   padding-right: 2vw;
 }
 
-.skills-div{
-  width: 50%;
-}
 
 section p {
   color: rgb(245, 245, 245);
-  font-size: large;
+  font-size: 2vmax;
   text-align: center;
 }
 
@@ -131,9 +128,8 @@ section:last-of-type {
 
 .hero-img,
 .service-img {
-  min-width: 20px;
-  max-width: 100%;
-  width: 400px;
+  min-width: 80px;
+  width: 40vw;
 }
 
 
@@ -166,8 +162,9 @@ section:last-of-type {
 
 .profile-img {
   border-radius: 50%;
+  min-width: 20px;
   width: 80vmin;
-  max-width: 100%;  
+  max-width: 100%;
 }
 
 .profile-txt {
