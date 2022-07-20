@@ -58,7 +58,7 @@ body {
   color: transparent;
   background-clip: text;
   animation: text 30s linear infinite;
-  transition: all 0.6s ease-in-out 0.1s;
+  transition: all 0.25s ease-in-out 0.1s;
   font-size: 3vmax;
 }
 
@@ -154,7 +154,7 @@ body {
 
 section {
   background-color: rgba(20,21,22,255);
-  min-height: 100vh;
+  min-height: 120vh;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -291,6 +291,91 @@ section:last-of-type {
 
 
 /*  -------------------------------
+          SKILLS SECTION STYLING
+    ------------------------------- */
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4vmax;
+}
+
+#skills img{
+  max-width: 100%;
+  width: 4vmax;
+  height: 4vmax;
+  margin: auto;
+}
+
+.skill-heading {
+  display: flex;
+  position: absolute;
+  margin-bottom: 35vmax;
+  max-height: 100%;
+}
+
+.skill-heading p{
+  text-transform: uppercase;
+  font-family: 'Bangers', cursive;
+  background-image: url("./assets/ig.jpg");
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.5;
+  font-size: 4vmax;
+  border-radius: 10px;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+
+.skill-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65vmax;
+  height: 35vmax;
+  background: linear-gradient(135deg, rgba(53, 53, 50, 0.674), rgb(14, 13, 13));
+  border-radius: 10px;
+  
+}
+
+.first-col, .second-col{
+  margin: auto;
+  display: flex;
+  gap: 3vmax;
+  transition: all 0.6s ease-in-out 0.4;
+
+}
+
+.first-col div, .second-col div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.093), rgba(255, 255, 255, 0));
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 15vmax;
+  height: 12vmax;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.first-col p, .second-col p{
+  font-size: 1.5vmax;
+  color: #f1f1f17f;
+}
+
+@media (hover: hover){
+  .first-col div:hover, .second-col div:hover{
+  transition: all 0.2s ease-in-out 0.1s ;
+
+    width: 15.5vmax;
+    height: 12.5vmax;
+  }
+}
+
+
+
+/*  -------------------------------
         RESPONSIVE NAVABAR
     ------------------------------- */
 
@@ -366,7 +451,7 @@ section:last-of-type {
         SCREEN RESPONSIVE
     ------------------------------- */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:820px) {
   #home {
     flex-direction: column;
     justify-content: center;
@@ -405,6 +490,19 @@ section:last-of-type {
   .social-menu ul li .fab{
     font-size: 6vmin;
     line-height: 6vmin;
+  }
+
+  .first-col, .second-col{
+    flex-direction: column;
+    gap: 7vmin;
+  }
+  .skill-div{
+    flex-direction: row;
+    width: 90vmin;
+    height: 60vmax;
+  }
+  .skill-heading {
+    margin-bottom: 60vmax;
   }
 }
 
