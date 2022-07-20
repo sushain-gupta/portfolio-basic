@@ -520,9 +520,9 @@ section:last-of-type {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(51, 46, 46, 0.842);
+  background: rgba(238, 250, 5, 0.850);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(51, 46, 46, 0.755);
+  background: rgba(238, 250, 5, 0.700);
 }
