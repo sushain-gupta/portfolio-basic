@@ -166,7 +166,7 @@ section {
 
 section p {
   color: rgb(245, 245, 245);
-  font-size: 2vmax;
+  font-size: 1.5vmax;
   text-align: center;
 }
 
@@ -307,14 +307,14 @@ section:last-of-type {
   margin: auto;
 }
 
-.skill-heading {
+.section-heading {
   display: flex;
   position: absolute;
   margin-bottom: 35vmax;
   max-height: 100%;
 }
 
-.skill-heading p{
+.section-heading p{
   text-transform: uppercase;
   font-family: 'Bangers', cursive;
   background-image: url("./assets/ig.jpg");
@@ -336,7 +336,6 @@ section:last-of-type {
   height: 35vmax;
   background: linear-gradient(135deg, rgba(53, 53, 50, 0.674), rgb(14, 13, 13));
   border-radius: 10px;
-  
 }
 
 .first-col, .second-col{
@@ -374,9 +373,116 @@ section:last-of-type {
 }
 
 
+/*  -------------------------------
+        PROJECT SECTION STYLING
+    ------------------------------- */
+
+    .project-div p{
+      font-size: 2vmax;
+      font-style: italic;
+      background-image: url("./assets/ig.jpg");
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0.6;
+    }
+
 
 /*  -------------------------------
-        RESPONSIVE NAVABAR
+        EDUCATION SECTION STYLING
+    ------------------------------- */
+
+
+#education {
+  padding-bottom: 70px;
+}
+
+.edu-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65vmax;
+  height: 42vmax;
+  background: linear-gradient(135deg, rgba(53, 53, 50, 0.674), rgb(14, 13, 13));
+  border-radius: 10px;
+}
+
+.edu-subdiv {
+  margin-top: 2vmax;
+  display: flex;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.093), rgba(255, 255, 255, 0));
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 60vmax;
+  height: 11vmax;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out 0.1s;
+  gap: 30px;
+}
+
+.edu-subdiv div{
+  margin: auto;
+  margin-left: 20px;
+  margin-right: 20px; 
+}
+
+.edu-subdiv p{
+  text-align: left;
+}
+
+.edu-div span{
+  color: rgba(245, 245, 245, 0.607);
+  font-size: 0.8vmax;
+}
+
+.default-status {
+  font-size: 1vmax;
+  background-color: rgba(1, 252, 10, 0.139);
+  width: max-content;
+  padding-left: 1vmax;
+  padding-right: 1vmax;
+  border-radius: 10px;
+}
+
+.persuing {
+  background-color: rgba(238, 53, 53, 0.412);
+}
+
+.edu-heading {
+  margin-bottom: 42.5vmax;
+}
+
+.edu-heading p{
+  font-size: 3vmax ;
+}
+
+.edu-img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 9.5vmax;
+  height: 9vmax;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+/*  -------------------------------
+        CONTACT SECTION STYLING
+    ------------------------------- */
+
+    .contact-div p{
+      font-size: 2vmax;
+      font-style: italic;
+      background-image: url("./assets/ig.jpg");
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0.6;
+    }
+
+/*  -------------------------------
+          RESPONSIVE NAVABAR
     ------------------------------- */
 
 @media (max-width: 900px) {
@@ -451,7 +557,7 @@ section:last-of-type {
         SCREEN RESPONSIVE
     ------------------------------- */
 
-@media screen and (max-width:820px) {
+@media screen and (max-width:650px) {
   #home {
     flex-direction: column;
     justify-content: center;
@@ -496,14 +602,32 @@ section:last-of-type {
     flex-direction: column;
     gap: 7vmin;
   }
+
   .skill-div{
     flex-direction: row;
     width: 90vmin;
     height: 60vmax;
   }
+
   .skill-heading {
     margin-bottom: 60vmax;
   }
+
+  .edu-heading {
+    margin-bottom: 70vmax;
+  }
+
+  .edu-div{
+    width: 90vmin;
+    height: 70vmax;
+  }
+
+  .edu-subdiv {
+    margin-top: 3vmax;
+    width: 85vmin;
+    height: 19.5vmax;
+  }
+  
 }
 
 /*  -------------------------------
@@ -520,9 +644,9 @@ section:last-of-type {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(238, 250, 5, 0.850);
+  background: #ffd900a5;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(238, 250, 5, 0.700);
+  background: #ffd9007b;
 }
