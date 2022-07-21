@@ -81,3 +81,33 @@ const linkeach = links_array.forEach(link => {
   element[0].addEventListener('click', scrolldiv)
 });
 
+
+/*------------------------------------
+        LOADER FUNCTION
+ -------------------------------------*/
+
+(function(){
+  var html = document.querySelector("html"),
+    timer_enb = function(){
+      setTimeout(scroll_dsb, 5000); // 5 seconds
+    },
+
+    scroll_dsb = function(){
+      html.style.overflowY = "scroll";
+    };
+
+  timer_enb();
+
+
+  var myDiv = document.getElementById("loader"),
+    show = function(){
+      myDiv.style.display = "block";
+      setTimeout(hide, 5000); // 5 seconds
+    },
+
+    hide = function(){
+      myDiv.style.display = "none";
+    };
+
+  show();
+})();
