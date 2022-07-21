@@ -7,6 +7,6 @@
 <i>(View on iPhone11 safari)</i>
 
 <div>
-<img src="https://user-images.githubusercontent.com/89994089/179860287-74138946-c759-4aa4-9851-f34df0a6bc72.PNG" width="300rem">
+<img src="https://user-images.githubusercontent.com/89994089/179860287-74138946-c759-4aa4-9851-f34df0a6bc72.PNG" width="300rem">&emsp;&emsp;&emsp;
 <img src="https://user-images.githubusercontent.com/89994089/179861675-d05b191c-e0e8-4e3e-9b00-6d12ae9fd046.PNG" width="300rem">
 </div>
