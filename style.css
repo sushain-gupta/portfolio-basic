@@ -16,22 +16,16 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   transition: background-color 1s ease;
   background-color: rgba(20,21,22,255);
 
 }
-
-.lock-scroll {
-  overflow: hidden;
-}
     
-
 
 /*---------------------------
         HEADER STYLING
@@ -152,7 +146,7 @@ body {
         SECTIONS STYLING
     ------------------------------- */
 
-section {
+.main-section {
   background-color: rgba(20,21,22,255);
   min-height: 120vh;
   margin: 0;
@@ -650,3 +644,4 @@ section:last-of-type {
 ::-webkit-scrollbar-thumb:hover {
   background: #ffd9007b;
 }
+
