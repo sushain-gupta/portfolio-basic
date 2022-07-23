@@ -44,7 +44,7 @@
             HEADER
     -------------------- -->
 
-  <section class="header">
+  <section class="header" id="header">
     <strong><a class="logo">SushainG</a></strong>
     <div class="navbar">
       <ul class="navbar-list">
@@ -78,7 +78,7 @@
                             -------------------- -->
 
   
-  <section class="main-section" id="home">    
+  <section class="container" id="home">    
     <div class="left-home-div">
       <div>
         <p class="profile-txt">Hey <img src="./assets/hello.gif" class="hello-img">,</br> 
@@ -112,7 +112,7 @@
                         -------------------- -->
 
 
-    <section class="main-section" id="skills">
+    <section class="container" id="skills">
       <div class="section-heading skill-heading"><p>Skills</p></div>
         <div class="skill-div">
           <div class="first-col">
@@ -133,7 +133,7 @@
                             PROJECTS SECTIONS
                         -------------------- -->
 
-    <section class="main-section" id="projects">
+    <section class="container" id="projects">
       <div class="project-div">
         <p>Projects section!<br>Comming soon...</p>
       </div>
@@ -148,10 +148,10 @@
                         -------------------- -->
 
 
-    <section class="main-section" id="education">
+    <section class="container" id="education">
       <div class="section-heading edu-heading"><p>Education</p></div>
 
-        <div class="edu-div">          
+        <div class="edu-div">   
           <div class="edu-subdiv">
             <div>
               <img class="edu-img" src="./assets/undergraduate.jpg">
@@ -189,12 +189,53 @@
                             CONTACT SECTIONS
                         -------------------- -->
 
-    <section class="main-section" id="contact">
+    <section class="container" id="contact">
+      <div id="snackbar">Some text some message..</div>
+
       <div class="contact-div">
-        <p>Contact section!<br>Comming soon...</p>
-      </div>
-      <div>
-        <img src="/assets/service.svg" class="service-img"/>
+          <div class="contact-img-div">          
+            <div class="contact-img-div">
+              <img class="contact-img" src="./assets/contact3.png">
+            </div>
+          </div>
+
+          <div class="mail-div">
+            <div class="mail-form">
+              <form id="myform">
+                <div class="user-box">
+                  <input type="text" id="name" required="">
+                  <label>Your Name</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" id="email" required="">
+                  <label>Email Address</label>
+                </div>
+                <div class="user-box">
+                  <textarea id="message" required=""></textarea>
+                  <label>Enter your message</label>
+                </div>
+                <a id="submit">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Submit
+                </a>
+              </form>
+            </div>
+            <div class="social-menu">
+              <ul>
+                <li><a href="https://www.linkedin.com/in/sushain-gupta-987015217/"><i class="fab fa-linkedin-in"></i></a></li>
+      
+                <li><a href="https://github.com/SushainGupta"><i class="fab fa-github"></i></i></a></li>
+      
+                <li><a href="https://instagram.com/sushain.gupta_?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a></li>
+                  
+                <li><a href="https://twitter.com/sushain_gupta7"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -205,5 +246,13 @@
     <script src="./script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+         emailjs.init("Sy44Fs8MoC3nHMHk9");
+      })();
+   </script>
   </body>
 </html>
