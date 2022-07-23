@@ -653,6 +653,8 @@ section:last-of-type {
       }
     }
 
+  /* TOAST/SNACKBAR */
+
     #snackbar {
       visibility: hidden;
       background-color: #333;
@@ -669,8 +671,8 @@ section:last-of-type {
     
     #snackbar.show {
       visibility: visible;
-      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
     }
     
     @-webkit-keyframes fadein {
@@ -873,36 +875,35 @@ section:last-of-type {
   }
 
   #snackbar {
-    /* visibility: hidden; */
     background-color: #333;
     color: #fff;
     text-align: center;
     border-radius: 10px;
     padding: 16px;
     position: fixed;
-    z-index: 1;
-    bottom: 80vh;
-    left: 25%;
-    font-size: 1.2vmax;
+    bottom: 70vh;
+    left: 10%;
+    right: 10%;
+    font-size: 1.6vmax;
   }
   
   @-webkit-keyframes fadein {
     from {left: 0; opacity: 0;} 
-    to {left: 15vmax; opacity: 1;}
+    to {left: 10%; opacity: 1;}
   }
   
   @keyframes fadein {
     from {left: 0; opacity: 0;}
-    to {left: 15vmax; opacity: 1;}
+    to {left: 10%; opacity: 1;}
   }
   
   @-webkit-keyframes fadeout {
-    from {left: 15vmax; opacity: 1;} 
+    from {left: 10%; opacity: 1;} 
     to {left: 0; opacity: 0;}
   }
   
   @keyframes fadeout {
-    from {left: 15vmax; opacity: 1;}
+    from {left: 10%; opacity: 1;}
     to {left: 0; opacity: 0;}
   }
 
