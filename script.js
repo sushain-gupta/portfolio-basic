@@ -4,8 +4,8 @@
 
 const mobile_nav = document.querySelector('.mobile-navbar-btn');
 
-const nav_link = document.querySelectorAll('.navbar-link'); // returns NodeList
-var div_array = [...nav_link]; // converts NodeList to Array
+const nav_link = document.querySelectorAll('.navbar-link');
+var div_array = [...nav_link];
 div_array.forEach(navbar_link => {
     navbar_link.addEventListener('click', () => {
         toggleNav()
@@ -129,33 +129,88 @@ const linkeach = links_array.forEach(link => {
 
 
 
-/*------------------------------------
-        EMAIL FUNCTION AND 
- -------------------------------------*/
+/*-------------------------------------------------------------------
+        FORM AND EMAIL FUNCTIONALITY WITH ERROR DETECTION(IF ANY)
+ --------------------------------------------------------------------*/
 
-function SendMail () {
-
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-
-  var templateParams = {
-    from_name : document.getElementById("name").value,
-    email_id : document.getElementById("email").value,
-    message : document.getElementById("message").value,
-  }
-
-  emailjs.send('service_3mn5qzc', 'template_0jyed5d', templateParams).then(function(response) {
-    console.log('SUCCESS!', response.status, response.text);
-    x.innerHTML = "Your message was sent successfully!"
-    x.style.backgroundColor = "green"
-  }, 
-  function(error) {
-    x.innerHTML = "Error! Your message was not sent. please check your internet connection and try again."
-    x.style.backgroundColor = "red"
-  });
-
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4800); 
-}
+        /*--------------------------
+                FORM FUNCTION
+        ---------------------------*/
 
 const submit_btn = document.getElementById('submit')
-submit_btn.addEventListener('click', SendMail);
+submit_btn.addEventListener('click', validateForm)
+function validateForm() {
+  var nameVal = document.getElementById("name").value;
+  var emailVal = document.getElementById("email").value;
+  var messageVal = document.getElementById("message").value;
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  // Display if the name field is kept empty else hide
+
+  if(nameVal == "") {
+  document.getElementById("nameError").style.visibility = "visible";
+  } 
+  if(nameVal){
+    document.getElementById("nameError").style.visibility = "hidden";
+    var nameVal = true;
+  }
+
+  // Display if the email field is kept empty else hide
+
+  if(emailVal.match(mailformat)) {
+    document.getElementById("emailError").style.visibility = "hidden";
+    var emailVal = true;
+  }else {
+    document.getElementById("emailError").style.visibility = "visible";
+  };
+
+
+  // Display if the message field is kept empty else hide
+
+  if(messageVal == "") {
+    document.getElementById("messageError").style.visibility = "visible";
+  }else {
+    document.getElementById("messageError").style.visibility = "hidden";
+    var messageVal = true;
+  };
+
+
+        /*--------------------------
+                MAIL FUNCTION
+        ---------------------------*/
+
+  // Mail & snackbar functionality is executed if and only if all the fields are filled bye the user.
+  if(nameVal && emailVal && messageVal == true) {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+  
+    // parameters to be passed from form.
+    var templateParams = {
+      from_name : document.getElementById("name").value,
+      email_id : document.getElementById("email").value,
+      message : document.getElementById("message").value,
+    }
+  
+    emailjs.send('service_3mn5qzc', 'template_0jyed5d', templateParams).then(function(response) {
+      x.innerHTML = "Your message was sent successfully!"
+      x.style.backgroundColor = "green"
+      // Reset form if message was sent successfully.
+      document.getElementById("myform").reset();
+    },
+  
+    // Error function 
+    function(error) {
+      // If any error occurs at backend while the internet status is on, error will be thrown likewise, else internet error will be thrown.
+      internet_status = window.navigator.onLine ? 'on' : 'off'
+      if(internet_status == "on") {
+        x.innerHTML = `Error! ${error.text}. Please try after sometime.`;
+        x.style.backgroundColor = "red"
+      } else {
+        x.innerHTML = "Error! Please check your internet connection and try again."
+      };
+    });
+  
+    // show error for 4.8 seconds.
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+  }
+}
