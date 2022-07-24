@@ -176,7 +176,7 @@
             <div><img class="edu-img" src="./assets/yashshreee.webp"></div>
             <div>
               <p>SSC | Yashshree Academy, Ahmednagar, Maharashtra, India.</p>
-              <span>The Best CBSE Affiliated School in Ahmednagar</span><br><br><br>
+              <span>The Best CBSE Affiliated School in Ahmednagar.</span><br><br><br>
               <p class="default-status">Completed 2018</p>
             </div>
           </div>
@@ -190,7 +190,7 @@
                         -------------------- -->
 
     <section class="container" id="contact">
-      <div id="snackbar"></div>
+      <div id="snackbar">Mmm...</div>
 
       <div class="contact-div">
           <div class="contact-img-div">          
@@ -203,18 +203,18 @@
             <div class="mail-form">
               <form id="myform">
                 <div class="user-box">
-                  <input type="text" id="name" required="">
-                  <label>Your Name</label>
+                  <input type="text" id="name" required>
+                  <label>Your Name*</label>
                 </div>
                 <div class="user-box">
-                  <input type="text" id="email" required="">
-                  <label>Email Address</label>
+                  <input type="text" id="email" required>
+                  <label>Email Address*</label>
                 </div>
                 <div class="user-box">
-                  <textarea id="message" required=""></textarea>
-                  <label>Enter your message</label>
+                  <textarea id="message" required></textarea>
+                  <label>Enter your message*</label>
                 </div>
-                <a id="submit">
+                <a id="submit" disabled>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -222,6 +222,9 @@
                   Submit
                 </a>
               </form>
+              <p id="nameError" class ="errorMessage top-arrow">Please Fill out this field</p>
+              <p id="emailError" class ="errorMessage top-arrow">Invalid Email Address</p>
+              <p id="messageError" class ="errorMessage top-arrow">Cannot remain Empty</p>
             </div>
             <div class="social-menu">
               <ul>
