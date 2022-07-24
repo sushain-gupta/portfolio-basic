@@ -330,7 +330,7 @@ section:last-of-type {
   width: 65vmax;
   height: 35vmax;
   background: linear-gradient(135deg, rgba(53, 53, 50, 0.674), rgb(14, 13, 13));
-  border-radius: 10px;
+  border-radius: 1vmax;
 }
 
 .first-col, .second-col{
@@ -338,7 +338,6 @@ section:last-of-type {
   display: flex;
   gap: 3vmax;
   transition: all 0.6s ease-in-out 0.4;
-
 }
 
 .first-col div, .second-col div{
@@ -349,7 +348,7 @@ section:last-of-type {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   width: 15vmax;
   height: 12vmax;
-  border-radius: 10px;
+  border-radius: 1vmax;
   transition: all 0.3s ease-in-out 0.1s;
 }
 
@@ -394,7 +393,7 @@ section:last-of-type {
       width: 79vw;
       height: 42vmax;
       background: linear-gradient(135deg, rgba(53, 53, 50, 0.674), rgb(14, 13, 13));
-      border-radius: 10px;
+      border-radius: 1vmax;
       display: flex;
     }
 
@@ -405,7 +404,7 @@ section:last-of-type {
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
       width: 75vw;
       height: 11vmax;
-      border-radius: 10px;
+      border-radius: 1vmax;
       transition: all 0.3s ease-in-out 0.1s;
       gap: 30px;
     }
@@ -431,7 +430,7 @@ section:last-of-type {
       width: max-content;
       padding-left: 1vmax;
       padding-right: 1vmax;
-      border-radius: 10px;
+      border-radius: 1vmax;
     }
 
     .persuing {
@@ -452,8 +451,8 @@ section:last-of-type {
       width: 9.5vmax;
       height: 9vmax;
       background-color: white;
-      padding: 10px;
-      border-radius: 10px;
+      padding: 1vmax;
+      border-radius: 1vmax;
     }
 
 
@@ -489,16 +488,6 @@ section:last-of-type {
       min-width: 50%;
     }
 
-    .mail-div h1{
-      font-size: 1vmax;
-      font-style: italic;
-      background-image: url("./assets/ig.jpg");
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      opacity: 0.6;
-    }
-
     .mail-form {
       top: 50%;
       width: 40vw;
@@ -507,7 +496,7 @@ section:last-of-type {
       background: rgba(0,0,0,.5);
       box-sizing: border-box;
       box-shadow: 0 15px 25px rgba(0,0,0,.6);
-      border-radius: 10px;
+      border-radius: 1vmax;
     }
     
     .mail-form .user-box {
@@ -528,6 +517,19 @@ section:last-of-type {
       user-select: text;
     }
 
+    /* Change autocomplete styles */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus{
+      -webkit-text-fill-color: white;
+      -webkit-box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset;
+      box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset;
+      transition: background-color;
+    }
+
     .mail-form .user-box label {
       position: absolute;
       top:0;
@@ -539,14 +541,52 @@ section:last-of-type {
       transition: .5s;
     }
     
-    .mail-form .user-box input:focus ~ label,
     .mail-form .user-box input:valid ~ label,
+    .mail-form .user-box input:focus ~ label,
     .mail-form .user-box textarea:focus ~ label,
-    .mail-form .user-box textarea:valid ~ label {
+    .mail-form .user-box textarea:valid ~ label{
       top: -2vmax;
       left: 0;
       color: #ffd900a5;
       font-size: 0.8vmax;
+    }
+
+    .errorMessage {
+      color: white;
+      width: 12vw;
+      padding-left: 1vmax;
+      padding-right: 1vmax;
+      padding-top: 0.7vmax;
+      padding-bottom: 0.7vmax;
+      margin-left: 20vw;
+      background-color: rgba(255, 255, 255, 0.082);
+      visibility: hidden;
+      border-radius: 0.5vmax;
+      position: relative;
+      font-size: 0.8vw;
+      }
+
+    .errorMessage.top-arrow:after {
+    content: " ";
+    position: absolute;
+    right: 9vw;
+    top: -1vmax;
+    border-top: none;
+    border-right: 0.8vmax solid transparent;
+    border-left: 0.8vmax solid transparent;
+    border-bottom: 1vmax solid rgba(255, 255, 255, 0.082);
+    }
+
+    #nameError {
+      top: -22vmax; 
+    }
+
+    #emailError {
+      top: -18vmax;
+    }
+
+    #messageError {
+      top: -12.5vmax;
     }
     
     .mail-form form a {
@@ -561,7 +601,7 @@ section:last-of-type {
       overflow: hidden;
       transition: .5s;
       margin-top: 2vmax;
-      letter-spacing: 0.3rem
+      letter-spacing: 0.3rem;
     }
     
     .mail-form a:hover {
@@ -660,7 +700,7 @@ section:last-of-type {
       background-color: #333;
       color: #fff;
       text-align: center;
-      border-radius: 10px;
+      border-radius: 0.5vmax;
       padding: 16px;
       position: fixed;
       z-index: 1;
@@ -772,25 +812,6 @@ section:last-of-type {
 
 
 @media screen and (max-width:650px) {
-  #home {
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 5vw;
-  }
-
-  .contact-div{
-    flex-direction: column;
-  }
-
-  .contact-div {
-    align-items: center;
-  }
-
-  .contact-img {
-    margin: 0px;
-    padding-bottom: 20px ;
-  }
-
   #header{
     height: 14vmin;
   }
@@ -831,6 +852,12 @@ section:last-of-type {
     gap: 7vmin;
   }
 
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5vw;
+  }
+
   .skill-div{
     flex-direction: row;
     width: 90vmin;
@@ -861,6 +888,19 @@ section:last-of-type {
     height: 25vmax;
   }
 
+  .contact-div{
+    flex-direction: column;
+  }
+
+  .contact-div {
+    align-items: center;
+  }
+
+  .contact-img {
+    margin: 0px;
+    padding-bottom: 20px ;
+  }
+
   .contact-div .social-menu {
     display: flex;
     justify-content: center;
@@ -872,13 +912,54 @@ section:last-of-type {
 
   .mail-form {
     width: 80vw;
+    height: 42vmax;
+  }
+
+  .mail-form .user-box input, textarea {
+    padding: 1.5vmax 0;
+    font-size: 2vmax;
+    color: #fff;
+    margin-bottom: 3vmax;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid white;
+  }
+
+  .mail-form .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 1vmax 0;
+    font-size: 1.5vmax;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .mail-form .user-box input:valid ~ label,
+  .mail-form .user-box input:focus ~ label,
+  .mail-form .user-box textarea:focus ~ label,
+  .mail-form .user-box textarea:valid ~ label{
+    top: -2vmax;
+    left: 0;
+    color: #ffd900a5;
+    font-size: 1.4vmax;
+  }
+
+  #nameError {
+    top: -28.8vmax;
+  }
+
+  #emailError {
+    top: -22.7vmax;
+  }
+
+  #messageError {
+    top: -13.4vmax;
   }
 
   #snackbar {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    border-radius: 10px;
     padding: 16px;
     position: fixed;
     bottom: 70vh;
@@ -886,6 +967,21 @@ section:last-of-type {
     right: 10%;
     font-size: 1.6vmax;
   }
+
+  .errorMessage {
+    visibility: hidden;
+    width: 28vw;
+    margin-left: 43vw;
+    font-size: 1vmax;
+  }
+
+  .errorMessage.top-arrow:after {
+    right: 18vw;
+    top: -1vmax;
+    border-right: 0.8vmax solid transparent;
+    border-left: 0.8vmax solid transparent;
+    border-bottom: 1vmax solid rgba(255, 255, 255, 0.082);
+    }
   
   @-webkit-keyframes fadein {
     from {left: 0; opacity: 0;} 
@@ -909,6 +1005,24 @@ section:last-of-type {
 
 }
 
+
+/* ErrorMessage CSS specific to iOS devices */ 
+@supports (-webkit-touch-callout: none) {
+  #nameError {
+    top: -30.5vmax;
+  }
+
+  #emailError {
+    top: -24vmax;
+  }
+
+  #messageError {
+    top: -14.5vmax;
+  }
+}
+
+
+
 /*  -------------------------------
         SCROLLBAR STYLING
     ------------------------------- */
@@ -929,4 +1043,3 @@ section:last-of-type {
 ::-webkit-scrollbar-thumb:hover {
   background: #ffd9007b;
 }
-
