@@ -134,11 +134,30 @@
                         -------------------- -->
 
     <section class="container" id="projects">
-      <div class="project-div">
-        <p>Projects section!<br>Comming soon...</p>
+      <div class="section-heading project-heading">
+        <p>Projects</p>
       </div>
-      <div>
-        <img src="/assets/service.svg" class="service-img"/>
+      <div class="project-container">
+        <div class="carousel-wrapper">
+          <div class="carousel">
+            <div class="slider" id="slider" tabindex="0">
+              <div class="slide tab1"><span>Portfolio</span><button class="src-code-btn">Source code</button></div>
+              <div class="slide tab2"><span>Comming soon...</span></div>
+              <div class="slide tab3"><span>Comming soon...</span></div>
+              <div class="slide tab4"><span>Comming soon...</span></div>
+              <div class="slide tab5"><span>Comming soon...</span></div>
+            </div>
+            <button class="slider-control arrow-left hide" id="btn-prev"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <polyline points="15 6 9 12 15 18"></polyline>
+              </svg></button>
+            <button class="slider-control arrow-right" id="btn-next"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <polyline points="9 6 15 12 9 18"></polyline>
+              </svg></button>
+          </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -257,5 +276,7 @@
          emailjs.init("Sy44Fs8MoC3nHMHk9");
       })();
    </script>
+   <script src="https://unpkg.com/easy-scroll"></script>
+
   </body>
 </html>
