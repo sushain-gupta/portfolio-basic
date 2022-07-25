@@ -343,3 +343,10 @@ sliderUI.slides.forEach((slide, index) => {
   }
   img.src = images[index];
 });
+
+
+// Adding on click function to source code button in project section. 
+
+document.getElementById("src-code-btn").onclick = function () {
+  location.href = "https://github.com/SushainGupta/Portfolio";
+};
