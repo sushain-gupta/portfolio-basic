@@ -209,6 +209,8 @@ function validateForm() {
         x.style.backgroundColor = "red"
       } else {
         x.innerHTML = "Error! Please check your internet connection and try again."
+        x.style.backgroundColor = "red"
+
       };
     });
   
