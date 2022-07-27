@@ -190,8 +190,10 @@ function validateForm() {
       email_id : document.getElementById("email").value,
       message : document.getElementById("message").value,
     }
-  
-    emailjs.send('service_3mn5qzc', 'template_0jyed5d', templateParams).then(function(response) {
+
+    emailjs.init("fZdjcOta13YiSVWUv");
+
+    emailjs.send('service_pyxsrhx', 'template_160qlew', templateParams).then(function(response) {
       x.innerHTML = "Your message was sent successfully!"
       x.style.backgroundColor = "green"
       // Reset form if message was sent successfully.
