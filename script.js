@@ -282,3 +282,27 @@ document.getElementById("portfolio-link-btn").onclick = function () {
 document.getElementById("portfolio-code-btn").onclick = function () {
   location.href = "https://github.com/SushainGupta/Portfolio";
 };
+
+
+// Checks device type and adds classes accordingly!
+
+const ProjectSlides = document.getElementsByClassName("slides");
+const slideArr = [...ProjectSlides]
+
+function deviceCheck(){
+  const ua = navigator.userAgent
+  if (/android/i.test(ua)) {
+    slideArr.forEach(elem => {
+      elem.classList.add("android")
+    })
+  }
+   else if (/iPad|iPhone|iPod/.test(ua)){
+    slideArr.forEach(elem => {
+      elem.classList.add("ios")
+    })
+  }else {
+    slideArr.forEach(elem => {
+      elem.classList.add("otherDevice")
+    })
+  }
+}deviceCheck();
