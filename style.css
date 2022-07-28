@@ -701,9 +701,9 @@ body {
     textarea:-webkit-autofill:hover,
     textarea:-webkit-autofill:focus{
       -webkit-text-fill-color: white;
-      -webkit-box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset;
-      box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset;
-      transition: background-color;
+      -webkit-box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset !important;
+      box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset !important;
+      background-clip: content-box !important;
     }
 
     .mail-form .user-box label {
