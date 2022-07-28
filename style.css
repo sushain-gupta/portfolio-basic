@@ -232,6 +232,12 @@ body {
       color: whitesmoke;
       font-size: 3vmax;
       text-align: left;
+      padding-bottom: 10px;
+    }
+
+    .aboutme {
+      text-align: left;
+      font-size: 1vmax;
       padding-bottom: 20px;
     }
 
@@ -258,6 +264,7 @@ body {
       display: flex;
       gap: 2vmax;
       max-width: 100%;
+      margin-left: -10px;
     }
 
     .social-menu ul li{
@@ -488,10 +495,8 @@ body {
       backdrop-filter: blur(8px);
     }
     .android:hover span{
-     Display: none;
-     }
-
-
+      display: none;
+    }
 
     .ios span{
       -webkit-backdrop-filter: blur(8px);
@@ -1011,6 +1016,10 @@ body {
         font-size: 8vmin;
       }
 
+      .aboutme {
+        font-size: 3.5vmin;
+      }
+
       .my-name {
       font-size: 8vmin;
       }
@@ -1027,6 +1036,7 @@ body {
       .social-menu ul{
         display: flex;
         gap: 6vmin;
+        margin-left: 0;
       }
 
       .social-menu ul li .fab{
@@ -1042,7 +1052,7 @@ body {
       #home {
         flex-direction: column;
         justify-content: center;
-        padding-top: 5vw;
+        padding-top: 9vw;
       }
 
       .skill-div{
