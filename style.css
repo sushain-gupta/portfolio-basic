@@ -487,6 +487,10 @@ body {
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
     }
+    .android:hover span{
+     Display: none;
+     }
+
 
 
     .ios span{
