@@ -306,3 +306,6 @@ function deviceCheck(){
     })
   }
 }deviceCheck();
+
+console.log('\x1B[36m Want are you doing here?! You sneaky developer...');
+console.log('\x1B[36m Haha have a great time lad 😉');
