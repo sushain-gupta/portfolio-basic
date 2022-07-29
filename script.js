@@ -137,20 +137,68 @@ const linkeach = links_array.forEach(link => {
                 FORM FUNCTION
         ---------------------------*/
 
-const submit_btn = document.getElementById('submit')
-submit_btn.addEventListener('click', validateForm)
-function validateForm() {
-  var nameVal = document.getElementById("name").value;
-  var emailVal = document.getElementById("email").value;
-  var messageVal = document.getElementById("message").value;
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-  // Display if the name field is kept empty else hide
+// Display if the name field is kept empty else hide
+function checkName(){
+  var nameVal = document.getElementById("name").value.trim();
 
   if(nameVal == "") {
-  document.getElementById("nameError").style.visibility = "visible";
-  } 
-  if(nameVal){
+    document.getElementById("nameError").style.visibility = "visible"
+    var nameVal = false;
+  } else {
+    document.getElementById("nameError").style.visibility = "hidden";
+    var nameVal = true;
+  }
+}
+
+// Display if the email field is kept empty else hide
+function checkEmail() {
+  var emailVal = document.getElementById("email").value.trim();
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if(emailVal.match(mailformat)) {
+    document.getElementById("emailError").style.visibility = "hidden";
+    var emailVal = true;
+  }else {
+    document.getElementById("emailError").style.visibility = "visible"
+    var emailVal = false;
+
+  };
+}
+
+// Display if the message field is kept empty else hide
+function checkMessage() {
+  var messageVal = document.getElementById("message").value.trim();
+
+  if(messageVal == "") {
+    document.getElementById("messageError").style.visibility = "visible"
+    var messageVal = false;
+  }else {
+    document.getElementById("messageError").style.visibility = "hidden";
+    var messageVal = true;
+  };
+}
+
+      /*-----------------------------------
+                SUBMIT BUTTON FUNCTION
+        -----------------------------------*/
+
+
+const submit_btn = document.getElementById('submit')
+submit_btn.addEventListener('click', validateForm);
+
+function validateForm() {
+  var nameVal = document.getElementById("name").value.trim();
+  var emailVal = document.getElementById("email").value.trim();
+  var messageVal = document.getElementById("message").value.trim();
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  
+
+  // Display if the name field is kept empty else hide
+  
+    if(nameVal == "") {
+    document.getElementById("nameError").style.visibility = "visible"
+    var nameVal = false;
+  } else {
     document.getElementById("nameError").style.visibility = "hidden";
     var nameVal = true;
   }
@@ -161,29 +209,31 @@ function validateForm() {
     document.getElementById("emailError").style.visibility = "hidden";
     var emailVal = true;
   }else {
-    document.getElementById("emailError").style.visibility = "visible";
-  };
+    document.getElementById("emailError").style.visibility = "visible"
+    var emailVal = false;
 
+  };
 
   // Display if the message field is kept empty else hide
 
   if(messageVal == "") {
-    document.getElementById("messageError").style.visibility = "visible";
+    document.getElementById("messageError").style.visibility = "visible"
+    var messageVal = false;
   }else {
     document.getElementById("messageError").style.visibility = "hidden";
     var messageVal = true;
   };
 
 
-        /*--------------------------
+
+          /*--------------------------
                 MAIL FUNCTION
         ---------------------------*/
 
-  // Mail & snackbar functionality is executed if and only if all the fields are filled bye the user.
-  if(nameVal && emailVal && messageVal == true) {
-    var x = document.getElementById("snackbar");
+// Mail & snackbar functionality is executed if and only if all the fields are filled by the user.
+  var x = document.getElementById("snackbar");
+  if(validateForm == true) {
     x.className = "show";
-  
     // parameters to be passed from form.
     var templateParams = {
       from_name : document.getElementById("name").value,
@@ -210,14 +260,18 @@ function validateForm() {
       } else {
         x.innerHTML = "Error! Please check your internet connection and try again."
         x.style.backgroundColor = "red"
-
       };
     });
   
-    // show error for 4.8 seconds.
+    // show error for 4 seconds.
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
-  }
+  } else {
+    x.className = "show";
+    x.innerHTML = `Please fill in a valid values in all the required fields!`;
+    x.style.backgroundColor = "red"}
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 }
+
 
 
 /*-------------------------------------------
