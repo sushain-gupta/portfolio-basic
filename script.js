@@ -267,7 +267,7 @@ function validateForm() {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
   } else {
     x.className = "show";
-    x.innerHTML = `Please fill in a valid values in all the required fields!`;
+    x.innerHTML = `Please fill in a valid value in all the required fields!`;
     x.style.backgroundColor = "red"}
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 }
@@ -362,4 +362,4 @@ function deviceCheck(){
 }deviceCheck();
 
 console.log('\x1B[36m Want are you doing here?! You sneaky developer...');
-console.log('\x1B[36m Haha have a great time lad 😉');
+console.log('\x1B[36m Haha have a great time 😉');
