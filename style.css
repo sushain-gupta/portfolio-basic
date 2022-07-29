@@ -738,7 +738,8 @@ body {
 
     .errorMessage {
       color: white;
-      width: 12vw;
+      min-width: 12vmax;
+      max-width: 100%;
       padding-left: 1vmax;
       padding-right: 1vmax;
       padding-top: 0.7vmax;
@@ -748,7 +749,7 @@ body {
       visibility: hidden;
       border-radius: 0.5vmax;
       position: relative;
-      font-size: 0.8vw;
+      font-size: 0.9vmax;
     }
 
     .errorMessage.top-arrow:after {
@@ -767,11 +768,11 @@ body {
     }
 
     #emailError {
-      top: -18vmax;
+      top: -18.3vmax;
     }
 
     #messageError {
-      top: -12.5vmax;
+      top: -13vmax;
     }
     
     .mail-form form a {
@@ -1177,7 +1178,7 @@ body {
         top: -1vmax;
         border-right: 0.8vmax solid transparent;
         border-left: 0.8vmax solid transparent;
-        border-bottom: 1vmax solid rgba(255, 255, 255, 0.082);
+        border-bottom: 1vmax solid rgba(30, 30, 30);
         }
       
       @-webkit-keyframes fadein {
