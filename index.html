@@ -221,15 +221,15 @@
             <div class="mail-form">
               <form id="myform">
                 <div class="user-box">
-                  <input type="text" id="name" required>
+                  <input type="text" id="name" onchange="checkName()" required>
                   <label>Your Name*</label>
                 </div>
                 <div class="user-box">
-                  <input type="text" id="email" required>
+                  <input type="text" id="email" onchange="checkEmail()" required>
                   <label>Email Address*</label>
                 </div>
                 <div class="user-box">
-                  <textarea id="message" required></textarea>
+                  <textarea id="message" onchange="checkMessage()" required></textarea>
                   <label>Enter your message*</label>
                 </div>
                 <a id="submit" disabled>
@@ -240,9 +240,9 @@
                   Submit
                 </a>
               </form>
-              <p id="nameError" class ="errorMessage top-arrow">Please Fill out this field</p>
+              <p id="nameError" class ="errorMessage top-arrow">Cannot remain empty</p>
               <p id="emailError" class ="errorMessage top-arrow">Invalid Email Address</p>
-              <p id="messageError" class ="errorMessage top-arrow">Cannot remain Empty</p>
+              <p id="messageError" class ="errorMessage top-arrow">Cannot remain empty</p>
             </div>
             <div class="social-menu">
               <ul>
