@@ -1,6 +1,17 @@
 <h1> Portfolio </h1>
 <h2> A portfolio using HTML5, CSS3 & JavaScript!</h2>
-<p>https://sushaingupta.netlify.app/<p></br>
+What one can see in this project : <br>
+- Simplicity <br>
+- Modern UI <br>
+- Pure CSS <br>
+- Easy to understand <br>
+- Fully Functional <br>
+- Email service for contact/feedback <br>
+- Smooth, easy and better UX <br>
+- Mobile support (Android as well as IOS)<br>
+- Custom navbar for mobile devices (Hamburger menu) <br><br>
+For the email service I have used EmailJs as it can send Email Directly From JavaScript and there's no need for a server.<br>
+</p>
 <h3>🚀 Supports all width sizes including macbooks as well!</h3>
 <img src="https://user-images.githubusercontent.com/89994089/181282674-4c6c841c-1394-4761-b7bd-c3ae670e4ca9.png"></br>
 <h3>🚀 Mobile device support with various screen widths including iPads which comes with a Hamburger menu on top!</h3>
