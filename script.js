@@ -143,24 +143,24 @@ function checkName(){
 
   if(nameVal == "") {
     document.getElementById("nameError").style.visibility = "visible"
-    var nameVal = false;
+    return false
   } else {
     document.getElementById("nameError").style.visibility = "hidden";
-    var nameVal = true;
+    return true
   }
 }
 
 // Display if the email field is kept empty else hide
 function checkEmail() {
-  var emailVal = document.getElementById("email").value.trim();
+  var emailVal = document.getElementById("email").value;
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   if(emailVal.match(mailformat)) {
     document.getElementById("emailError").style.visibility = "hidden";
-    var emailVal = true;
+    return true
   }else {
     document.getElementById("emailError").style.visibility = "visible"
-    var emailVal = false;
+    return false
   };
 }
 
@@ -171,10 +171,10 @@ function checkMessage() {
 
   if(messageVal == "") {
     document.getElementById("messageError").style.visibility = "visible"
-    var messageVal = false;
+    return false
   }else {
     document.getElementById("messageError").style.visibility = "hidden";
-    var messageVal = true;
+    return true
   };
 }
 
@@ -185,53 +185,21 @@ function checkMessage() {
 
 const submit_btn = document.getElementById('submit')
 submit_btn.addEventListener('click', validateForm);
+var x = document.getElementById("snackbar");
 
 function validateForm() {
-  var nameVal = document.getElementById("name").value.trim();
-  var emailVal = document.getElementById("email").value.trim();
-  var messageVal = document.getElementById("message").value.trim();
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  console.log(checkName());
+  checkName();
+  checkEmail();
+  checkMessage();
+
   
-
-  // Display if the name field is kept empty else hide
-  
-  if(nameVal == "") {
-    document.getElementById("nameError").style.visibility = "visible"
-    var nameVal = false;
-  } else {
-    document.getElementById("nameError").style.visibility = "hidden";
-    var nameVal = true;
-  }
-
-  // Display if the email field is kept empty else hide
-
-  if(emailVal.match(mailformat)) {
-    document.getElementById("emailError").style.visibility = "hidden";
-    var emailVal = true;
-  }else {
-    document.getElementById("emailError").style.visibility = "visible"
-    var emailVal = false;
-
-  };
-
-  // Display if the message field is kept empty else hide
-
-  if(messageVal == "") {
-    document.getElementById("messageError").style.visibility = "visible"
-    var messageVal = false;
-  }else {
-    document.getElementById("messageError").style.visibility = "hidden";
-    var messageVal = true;
-  };
-
-
-
           /*--------------------------
                 MAIL FUNCTION
         ---------------------------*/
 
 // Mail & snackbar functionality is executed if and only if all the fields are filled by the user.
-  if(nameVal && emailVal && messageVal == true) {
+  if(checkName() && checkEmail() && checkMessage() == true){
     x.className = "show";
     // parameters to be passed from form.
     var templateParams = {
@@ -319,7 +287,7 @@ slides.forEach((slide, index) => {
 let img = new Image();
 img.onload = (a) => {
   slide.style.backgroundImage = `url(${images[index]})`;
-  slide.classList.add('has-image');
+  // slide.classList.add('has-image');
 }
 img.src = images[index];
 });
